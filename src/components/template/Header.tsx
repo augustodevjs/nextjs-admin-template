@@ -8,13 +8,13 @@ interface HeaderProps {
 }
 
 export function Header({ title, subtitle }: HeaderProps) {
-  const context = useData();
+  const { changeTheme, theme } = useData();
 
   return (
     <div className="flex">
       <Title title={title} subtitle={subtitle} />
       <div className="flex flex-grow justify-end">
-        <ChangeTheme theme={context.theme} changeTheme={context.changeTheme} />
+        <ChangeTheme theme={theme} changeTheme={changeTheme} />
       </div>
     </div>
   )

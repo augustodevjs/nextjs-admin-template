@@ -1,6 +1,6 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import { useContext } from 'react';
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+
 import { AppProvider } from '../data/context/AppContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -11,4 +11,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export default MyApp
+export default MyApp;
