@@ -10,20 +10,20 @@ interface MenuItemProps {
 
 export function MenuItem({ url, text, icon, onClick, className }: MenuItemProps) {
   return (
-    <li onClick={onClick} className="hover:bg-slate-100 cursor-pointer">
+    <li onClick={onClick} className="hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
       {url ? (
         <Link href={url}>
-          <a className={`flex flex-col justify-center items-center h-20 w-20 text-gray-600 ${className}`} >
+          <a className={`flex flex-col justify-center items-center h-20 w-20 text-gray-600 ${className} dark:text-gray-200`} >
             {icon}
-            < span className="text-xs font-ligh" >
+            <span className="text-xs font-light " >
               {text}
             </span >
           </a >
         </Link>
       ) : (
-        <a className={`flex flex-col justify-center items-center h-20 w-20 text-gray-600 ${className}`} >
+        <a className={`flex flex-col justify-center items-center h-20 w-20 text-gray-600 ${className} dark:text-gray-200`} >
           {icon}
-          < span className="text-xs font-light ${className}" >
+          <span className={`text-xs font-light`} >
             {text}
           </span >
         </a >

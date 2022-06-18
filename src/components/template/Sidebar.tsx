@@ -4,7 +4,7 @@ import { MenuItem } from "./MenuItem";
 
 export function Sidebar() {
   return (
-    <aside className="flex flex-col ">
+    <aside className="flex flex-col dark:bg-gray-900 bg-gray-200 text-gray-700">
       <div className="flex flex-col items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-800 h-20 w-20">
         <Logo />
       </div>
@@ -14,7 +14,12 @@ export function Sidebar() {
         <MenuItem icon={belIcon} url="/notificacoes" text="Notificações" />
       </ul>
       <ul >
-        <MenuItem icon={logoutIcon} text="Sair" onClick={() => alert('Logout')} className={`text-red-600 hover:bg-red-700 hover:text-white transition delay-75 ease-linear `} />
+        <MenuItem 
+          icon={logoutIcon} 
+          text="Sair" 
+          onClick={() => alert('Logout')} 
+          className={`text-red-600 dark:text-red-400 hover:bg-red-700 dark:hover:bg-red-800 hover:text-white dark:hover:text-white transition delay-75 ease-linear `} 
+        />
       </ul>
     </aside >
   )
