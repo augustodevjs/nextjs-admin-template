@@ -16,7 +16,7 @@ export default function Autenticacao() {
   }
 
   function submit() {
-    if(mode === 'login') {
+    if (mode === 'login') {
       alert('Login')
     } else {
       alert('Cadastrar')
@@ -27,7 +27,7 @@ export default function Autenticacao() {
     <div className="flex h-screen items-center justify-center">
 
       <div className="hidden md:block md:w-1/2 lg:w-2/3">
-        <img src="https://source.unsplash.com/random" alt="Imagem da Tela de Autenticação" className="h-screen w-full object-cover"/>
+        <img src="https://source.unsplash.com/cPxNce0o_Jk" alt="Imagem da Tela de Autenticação" className="h-screen w-full object-cover" />
       </div>
 
       <div className="m-10 w-full md:w-1/2 lg:w-1/3">
@@ -37,26 +37,26 @@ export default function Autenticacao() {
 
         {error ? (
           <div className="flex items-center bg-red-400 text-white py-3 px-5 my-2 border border-red-700 rounded-lg">
-          {warningIcon()}
-          <span className="ml-3">{error}</span>
-        </div>
-        ): false}
+            {warningIcon()}
+            <span className="ml-3">{error}</span>
+          </div>
+        ) : false}
 
-        <AuthInput 
-          type="email" 
-          label="Email" 
-          value={email} 
+        <AuthInput
+          type="email"
+          label="Email"
+          value={email}
           valueChanged={setEmail}
         />
-        <AuthInput 
-          type="password" 
-          label="Senha" 
+        <AuthInput
+          type="password"
+          label="Senha"
           value={password}
           valueChanged={setPassword}
         />
 
-        <button 
-          onClick={submit} 
+        <button
+          onClick={submit}
           className={`w-full bg-indigo-500 hover:bg-indigo-400 text-white rounded-lg px-4 py-3 mt-6`}
         >
           {mode === 'login' ? 'Entrar' : 'Cadastrar'}
@@ -64,8 +64,8 @@ export default function Autenticacao() {
 
         <hr className="my-6 border-gray-300 h-full" />
 
-        <button 
-          onClick={submit} 
+        <button
+          onClick={submit}
           className={`w-full bg-red-500 hover:bg-red-400 text-white rounded-lg px-4 py-3`}
         >
           Entrar com o Google
@@ -76,11 +76,11 @@ export default function Autenticacao() {
             Novo por aqui?
             <a onClick={() => setMode('register')} className="text-blue-500 hover:text-blue-700 font-semibold cursor-pointer"> Crie uma conta gratuitamente</a>
           </p>
-        ): (
+        ) : (
           <p className="mt-8">
-           Já faz parte da nossa comunidade?
-          <a onClick={() => setMode('login')} className="text-blue-500 hover:text-blue-700 font-semibold cursor-pointer"> Entre com a suas credênciais</a>
-        </p>
+            Já faz parte da nossa comunidade?
+            <a onClick={() => setMode('login')} className="text-blue-500 hover:text-blue-700 font-semibold cursor-pointer"> Entre com a suas credênciais</a>
+          </p>
         )}
       </div>
     </div>
