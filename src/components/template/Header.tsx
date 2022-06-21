@@ -1,4 +1,5 @@
 import { useData } from "../../data/hook/useData";
+import { AvatarUser } from "./AvatarUser";
 import { ChangeTheme } from "./ChangeTheme";
 import { Title } from "./Title";
 
@@ -13,8 +14,9 @@ export function Header({ title, subtitle }: HeaderProps) {
   return (
     <div className="flex">
       <Title title={title} subtitle={subtitle} />
-      <div className="flex flex-grow justify-end">
+      <div className="flex flex-grow justify-end items-center">
         <ChangeTheme theme={theme} changeTheme={changeTheme} />
+        <AvatarUser className="ml-3" />
       </div>
     </div>
   )
