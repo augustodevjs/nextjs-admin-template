@@ -9,6 +9,7 @@ import { User } from '../model/User';
 interface AuthContextProps {
   user?: User;
   loginGoogle?: () => Promise<void>;
+  loading?: boolean;
   logout?: () => Promise<void>;
 }
 
@@ -88,11 +89,13 @@ export function AuthProvider({ children }: AuthProvider) {
     if (Cookies.get('admin-template-cod3r-auth')) {
       const cancel = firebase.auth().onIdTokenChanged(configureSession);
       return () => cancel();
+    } else {
+      setLoading(false)
     }
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, loginGoogle, logout }}>
+    <AuthContext.Provider value={{ user, loginGoogle, logout, loading }}>
       {children}
     </AuthContext.Provider>
   )

@@ -1,7 +1,7 @@
-import { AvatarUser } from "../components/template/AvatarUser";
 import { Layout } from "../components/template/Layout";
 
 export default function Perfil() {
+
   return (
     <div>
       <Layout
