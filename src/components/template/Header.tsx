@@ -1,4 +1,4 @@
-import { useData } from "../../data/hook/useData";
+import { useData } from "../../hook/useData";
 import { AvatarUser } from "./AvatarUser";
 import { ChangeTheme } from "./ChangeTheme";
 import { Title } from "./Title";

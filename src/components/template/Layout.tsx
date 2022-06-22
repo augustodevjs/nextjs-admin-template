@@ -1,4 +1,4 @@
-import { useData } from "../../data/hook/useData";
+import { useData } from "../../hook/useData";
 import { Content } from "./Content";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";

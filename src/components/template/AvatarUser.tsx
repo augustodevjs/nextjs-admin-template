@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useAuth } from "../../data/hook/useAuth";
+import { useAuth } from "../../hook/useAuth";
 
 interface AvatarUserProps {
   className?: string;

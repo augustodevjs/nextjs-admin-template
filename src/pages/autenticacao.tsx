@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AuthInput } from "../components/auth/AuthInput";
 import { warningIcon } from "../components/icons";
-import { useAuth } from "../data/hook/useAuth";
+import { useAuth } from "../hook/useAuth";
 
 type Mode = 'login' | 'register';
 
