@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Router from 'next/router';
-import loadingGif from '../../../public/images/loadingGif.gif';
-import { useAuth } from '../../hook/useAuth';
+import Script from 'next/script';
+import loadingGif from '../../public/images/loadingGif.gif';
+import { useAuth } from '../hook/useAuth';
 
 interface forceAuthProps {
   children: React.ReactNode;
@@ -14,6 +15,17 @@ export function ForceAuth({ children }: forceAuthProps) {
   function renderContent() {
     return (
       <>
+        <Head>
+          <Script 
+            dangerouslySetInnerHTML={{
+              __html: `
+                if(!document.cookie.includes("admin-template-cod3r-auth)) {
+                  window.location.href = "/autenticacao"
+                }
+              `
+            }}
+          />
+        </Head>
         {children}
       </>
     )

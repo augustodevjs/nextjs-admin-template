@@ -1,5 +1,5 @@
+import { ForceAuth } from "../../functions/ForceAuth";
 import { useData } from "../../hook/useData";
-import { ForceAuth } from "../auth/ForceAuth";
 import { Content } from "./Content";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";

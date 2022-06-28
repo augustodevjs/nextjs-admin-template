@@ -6,7 +6,7 @@ import { useAuth } from "../hook/useAuth";
 type Mode = 'login' | 'register';
 
 export default function Autenticacao() {
-  const { loginGoogle } = useAuth();
+  const { loginGoogle, login, register } = useAuth();
 
   const [mode, setMode] = useState<Mode>('login');
   const [email, setEmail] = useState('');
@@ -18,11 +18,18 @@ export default function Autenticacao() {
     setTimeout(() => setError(null), timeInSeconds * 1000);
   }
 
-  function submit() {
-    if (mode === 'login') {
-      alert('Login')
-    } else {
-      alert('Cadastrar')
+  async function submit() {
+    try {
+      if (mode === 'login') {
+        await login(email, password);
+      } else {
+        await register(email, password);
+        setEmail('');
+        setPassword('');
+        setMode('login');
+      }
+    } catch(e) {
+      showError(e?.message ?? 'Erro desconhecido!');
     }
   };
 
