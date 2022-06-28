@@ -8,9 +8,9 @@ import { User } from '../model/User';
 
 interface AuthContextProps {
   user?: User;
-  loginGoogle?: () => Promise<void>;
   loading?: boolean;
   logout?: () => Promise<void>;
+  loginGoogle?: () => Promise<void>;
 }
 
 interface AuthProvider {
@@ -76,10 +76,10 @@ export function AuthProvider({ children }: AuthProvider) {
 
   async function logout() {
     try {
-      setLoading(true)
+      setLoading(true);
       await firebase.auth().signOut();
       await configureSession(null);
-      Router.push('/autenticacao')
+      Router.push('/autenticacao');
     } finally {
       setLoading(false);
     }

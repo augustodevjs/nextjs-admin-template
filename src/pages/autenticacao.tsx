@@ -6,7 +6,7 @@ import { useAuth } from "../hook/useAuth";
 type Mode = 'login' | 'register';
 
 export default function Autenticacao() {
-  const { user, loginGoogle } = useAuth();
+  const { loginGoogle } = useAuth();
 
   const [mode, setMode] = useState<Mode>('login');
   const [email, setEmail] = useState('');
