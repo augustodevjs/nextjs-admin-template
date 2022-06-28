@@ -26,6 +26,6 @@ export function Layout({ title, subtitle, children }: LayoutProps) {
           </Content>
         </div>
       </div>
-    </ForceAuth>
+    </ForceAuthentication>
   )
 };
