@@ -1,4 +1,4 @@
-import { ForceAuth } from "../../functions/ForceAuth";
+import { ForceAuthentication } from "../../functions/ForceAuthentication";
 import { useData } from "../../hook/useData";
 import { Content } from "./Content";
 import { Header } from "./Header";
@@ -14,7 +14,7 @@ export function Layout({ title, subtitle, children }: LayoutProps) {
   const context = useData();
 
   return (
-    <ForceAuth>
+    <ForceAuthentication>
       <div className={`${context.theme} flex h-screen w-screen`}>
         <Sidebar />
         <div

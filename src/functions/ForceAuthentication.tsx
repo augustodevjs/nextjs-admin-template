@@ -9,7 +9,7 @@ interface forceAuthProps {
   children: React.ReactNode;
 }
 
-export function ForceAuth({ children }: forceAuthProps) {
+export function ForceAuthentication({ children }: forceAuthProps) {
   const { user, loading } = useAuth();
 
   function renderContent() {
