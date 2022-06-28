@@ -28,4 +28,4 @@ export function Layout({ title, subtitle, children }: LayoutProps) {
       </div>
     </ForceAuth>
   )
-}
+};
