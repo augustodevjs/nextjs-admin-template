@@ -1,7 +1,6 @@
 ## :rocket: Projeto utilizando Nextjs 
 
 <h1 align="center"><img src="./public/images/auth.png"></h1>
-<h1 align="center"><img src="./public/images/admin.png"></h1>
 
 Nesse projeto do Cod3r, foi criado um site administrativo que realiza autenticação utilizando o firebase, onde o seu principal objetivo é colocar em prática os conhecimentos do curso.
 
