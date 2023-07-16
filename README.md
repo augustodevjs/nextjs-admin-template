@@ -1,10 +1,8 @@
-## :rocket: Projeto utilizando Nextjs 
+## :rocket: Project using Nextjs 
 
 <h1 align="center"><img src="./public/images/auth.png"></h1>
 
-Nesse projeto do Cod3r, foi criado um site administrativo que realiza autenticação utilizando o firebase, onde o seu principal objetivo é colocar em prática os conhecimentos do curso.
-
-### Habilidades desenvolvidas
+### Tecnologies
 
 * [React](https://reactjs.org/)
 * [Typescript](https://www.typescriptlang.org/)
@@ -16,22 +14,22 @@ Nesse projeto do Cod3r, foi criado um site administrativo que realiza autentica�
 * [Private Route](https://www.robinwieruch.de/react-router-private-routes/)
 * [Tailwind CSS](https://tailwindcss.com/)
 
-### Como rodar o projeto
+### How to run the project
 
 ```bash
-# Clone o projeto
+# Clone the project
 $ git clone https://github.com/augustodevjs/nextjs-admin-template
 
-# Instale todas as depedências
+# Install all dependecies
 $ yarn
 
-# Rode o projeto
+# Run the project
 $ yarn run dev
 
 ```
 
-### :airplane: Acesse o projeto
+### :airplane: Access the project
 
-Hospedado na Vercel
+Hosted on Vercel
 
 https://nextjs-admin.vercel.app/autenticacao
